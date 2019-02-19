@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="cicd-test-suite.xml" />
+	<munit:test name="cicd-test-suite-jenkin-maven-cicdFlowTest" description="Test" doc:id="c60594c6-1985-4aa2-994d-8ac30dbf16eb" >
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to jenkin-maven-cicdFlow" doc:id="7e164c6c-c555-42d5-a497-256b35ef9dff" name="jenkin-maven-cicdFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="9d5f167a-e02f-434c-8d30-29c53cdee7c7" expression="#[payload]" is="#[MunitTools::equalTo('Test..1')]" message="Error... Munit Fail"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
