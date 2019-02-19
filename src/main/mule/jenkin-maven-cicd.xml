@@ -9,6 +9,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="jenkin-maven-cicdFlow" doc:id="3b0b1088-dc11-4aa0-ae4d-1f0adca9117e" >
 		<http:listener doc:name="Listener" doc:id="d85ea24b-6d0a-4d4c-8525-89f8ab2a7532" config-ref="HTTP_Listener_config" path="/cicd"/>
-		<set-payload value="#['Test..1']" doc:name="Set Payload" doc:id="3742c6a3-0955-47fe-9010-06375bee19c4" mimeType="text/plain"/>
+		<set-payload value="#['Test..2']" doc:name="Set Payload" doc:id="3742c6a3-0955-47fe-9010-06375bee19c4" mimeType="text/plain"/>
 	</flow>
 </mule>
