@@ -13,7 +13,7 @@
 			<flow-ref doc:name="Flow-ref to jenkin-maven-cicdFlow" doc:id="7e164c6c-c555-42d5-a497-256b35ef9dff" name="jenkin-maven-cicdFlow"/>
 		</munit:execution>
 		<munit:validation >
-			<munit-tools:assert-that doc:name="Assert that" doc:id="9d5f167a-e02f-434c-8d30-29c53cdee7c7" expression="#[payload]" is="#[MunitTools::equalTo('Test..1')]" message="Error... Munit Fail"/>
+			<munit-tools:assert-that doc:name="Assert that" doc:id="9d5f167a-e02f-434c-8d30-29c53cdee7c7" expression="#[payload]" is="#[MunitTools::equalTo('Test..2')]" message="Error... Munit Fail"/>
 		</munit:validation>
 	</munit:test>
 
